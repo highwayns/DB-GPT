@@ -1,5 +1,6 @@
 import en from '@/locales/en';
 import zh from '@/locales/zh';
+import ja from '@/locales/ja';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -15,6 +16,9 @@ i18n.use(initReactI18next).init({
     },
     zh: {
       translation: zh,
+    },
+    ja: {
+      translation: ja,
     },
   },
   lng: 'en',

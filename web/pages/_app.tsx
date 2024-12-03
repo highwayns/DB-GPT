@@ -5,6 +5,7 @@ import { STORAGE_LANG_KEY, STORAGE_USERINFO_KEY, STORAGE_USERINFO_VALID_TIME_KEY
 import { App, ConfigProvider, MappingAlgorithm, theme } from 'antd';
 import enUS from 'antd/locale/en_US';
 import zhCN from 'antd/locale/zh_CN';
+import jaJP from 'antd/locale/ja_JP';
 import classNames from 'classnames';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -111,7 +112,7 @@ function LayoutWrapper({ children }: { children: React.ReactNode }) {
 
   return (
     <ConfigProvider
-      locale={i18n.language === 'en' ? enUS : zhCN}
+      locale={i18n.language === 'en' ? enUS : i18n.language === 'ja' ? jaJP : zhCN}
       theme={{
         token: {
           colorPrimary: '#0C75FC',

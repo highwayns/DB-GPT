@@ -504,6 +504,10 @@ const AddOrEditPrompt: React.FC = () => {
                         label: t('Chinese'),
                         value: 'zh',
                       },
+                      {
+                        label: t('Japanese'),
+                        value: 'ja',
+                      },
                     ]}
                   />
                 </Form.Item>

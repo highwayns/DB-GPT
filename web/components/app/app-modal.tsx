@@ -54,6 +54,7 @@ export default function AppModal(props: IProps) {
   const languageOptions = [
     { value: 'zh', label: t('Chinese') },
     { value: 'en', label: t('English') },
+    { value: 'ja', label: t('Japanese') },
   ];
 
   const onChange = (newActiveKey: string) => {

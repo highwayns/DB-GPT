@@ -19,12 +19,13 @@ services:
       - dbgptnet
   webserver:
     image: eosphorosai/dbgpt:latest
+    #image: eosphorosai/dbgpt-openai:latest
     command: python3 dbgpt/app/dbgpt_server.py
     environment:
       - LOCAL_DB_HOST=db
       - LOCAL_DB_PASSWORD=aa123456
       - ALLOWLISTED_PLUGINS=db_dashboard
-      - LLM_MODEL=glm-4-9b-chat
+      - LLM_MODEL=chatgpt_proxyllm #glm-4-9b-chat
     depends_on:
       - db
     volumes:
@@ -34,7 +35,7 @@ services:
       - dbgpt-data:/app/pilot/data
       - dbgpt-message:/app/pilot/message
     env_file:
-      - .env.template
+      - .env #.template
     ports:
       - 5670:5670/tcp
     # webserver may be failed, it must wait all sqls in /docker-entrypoint-initdb.d execute finish.

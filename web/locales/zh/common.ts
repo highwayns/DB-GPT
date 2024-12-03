@@ -235,6 +235,7 @@ export const CommonZh: Resources['translation'] = {
   operators: '算子',
   Chinese: '中文',
   English: '英文',
+  Japanese: '日文',
   docs: '文档',
   apps: '全部',
   please_enter_the_keywords: '请输入关键词',

@@ -120,10 +120,11 @@ function SideBar() {
   }, [mode, setMode]);
 
   const handleChangeLang = useCallback(() => {
-    const language = i18n.language === 'en' ? 'zh' : 'en';
+    const language = i18n.language === 'en' ? 'zh' : i18n.language === 'zh' ? 'ja' : 'en';
     i18n.changeLanguage(language);
     if (language === 'zh') moment.locale('zh-cn');
     if (language === 'en') moment.locale('en');
+    if (language === 'ja') moment.locale('ja-jp');
     localStorage.setItem(STORAGE_LANG_KEY, language);
   }, [i18n]);
   const settings = useMemo(() => {

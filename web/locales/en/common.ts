@@ -229,6 +229,7 @@ export const CommonEn = {
   operators: 'Operators',
   Chinese: 'Chinese',
   English: 'English',
+  Japanese: 'Japanese',
   docs: 'Docs',
   apps: 'All Apps',
   please_enter_the_keywords: 'Please enter the keywords',

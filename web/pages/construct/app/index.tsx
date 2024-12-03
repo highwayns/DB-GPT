@@ -149,6 +149,7 @@ export default function AppContent() {
   const languageMap = {
     en: t('English'),
     zh: t('Chinese'),
+    ja: t('Japanese'),
   };
   const handleChat = async (app: IApp) => {
     // 原生应用跳转
